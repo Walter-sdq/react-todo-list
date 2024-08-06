@@ -1,0 +1,5 @@
+.showLists,
+.completed,
+.pending {
+    width: -moz-available;
+}

@@ -1,0 +1,79 @@
+.todo {
+    grid-column: 4/end;
+    height: 100%;
+
+    .todo-padd {
+        padding: 2rem 2rem;
+        box-sizing: border-box;
+        height: inherit;
+    }
+
+    .todo-cont {
+        border-top: 1px solid var(--bs-black);
+        height: inherit;
+        position: relative;
+        overflow: auto;
+
+        .listCounter {
+            h1 {
+                color: var(--bs-blue);
+                font-size: 20px;
+                text-align: right;
+                text-transform: capitalize;
+            }
+
+            margin: 1rem 0;
+        }
+
+    }
+
+    .todo-cont::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .list-prev {
+        width: 100%;
+        height: 4rem;
+        cursor: pointer;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        box-sizing: border-box;
+
+        .list-title {
+            color: var(--bs-lblue);
+            text-transform: capitalize;
+        }
+
+        .list-details {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .chk-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 2rem;
+
+            i {
+                font-size: 20px;
+            }
+
+            .done:hover {
+                color: var(--bs-green);
+            }
+
+            .delete:hover {
+                color: red;
+            }
+        }
+    }
+
+    .list-prev:hover {
+        box-shadow: 1px 3px 5px var(--bs-lblue);
+        border-bottom: 1px solid var(--bs-black);
+        transform: translate(-5px, -5px);
+    }
+}
