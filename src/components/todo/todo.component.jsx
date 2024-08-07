@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './todo.css'
-const Todo = ({ lists, isNotNull, handleDelete}) => {
+const Todo = ({ lists, isNotNull, handleDelete }) => {
     // function check() {
     //     if (lists.lenght < 1) {
     //         `you have ${lists.length} task(s) on the list`
@@ -20,23 +20,22 @@ const Todo = ({ lists, isNotNull, handleDelete}) => {
                     </div>
 
                     {lists.map((list) => (
-
-                        <div className="list-prev" key={list.id}>
-                            <div className="list-prev-inner">
-                                <Link to={`/lists/${list.id}`}>
+                        <Link to={`/lists/${list.id}`}>
+                            <div className="list-prev" key={list.id}>
+                                <div className="list-prev-inner">
                                     <h2 className="list-title">
                                         {list.name}
                                     </h2>
                                     <p className="list-details">
                                         {list.body}
                                     </p>
-                                </Link>
+                                </div>
+                                <div className="chk-btn">
+                                    <i className="fas fa-check done" title='Done'></i>
+                                    <i className="fas fa-delete-left delete" title='Delete' onClick={() => handleDelete(list.id)} ></i>
+                                </div>
                             </div>
-                            <div className="chk-btn">
-                                <i className="fas fa-check done" title='Done'></i>
-                                <i className="fas fa-delete-left delete" title='Delete' onClick={() => handleDelete(list.id)} ></i>
-                            </div>
-                        </div>
+                        </Link>
                     )
 
                     )}
