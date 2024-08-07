@@ -2,7 +2,7 @@
     grid-column: 4/end;
     height: 100%;
 
-    .todo-padd{
+    .todo-padd {
         padding: 2rem 2rem;
         box-sizing: border-box;
         height: inherit;
@@ -43,7 +43,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 1rem 0 1rem 1rem;
         box-sizing: border-box;
 
         .list-title {
@@ -62,7 +62,13 @@
             display: inline-flex;
             align-items: center;
             gap: 2rem;
-
+            height: inherit;
+            width: 8rem;
+            justify-content: flex-end;
+            background: white;
+            z-index: 1000;
+            position: relative;
+            padding-right: 1rem;
             i {
                 font-size: 20px;
             }
@@ -74,14 +80,6 @@
             .delete:hover {
                 color: red;
             }
-
-            /* element {
-                height: 100%;
-                width: 8rem;
-                align-items: center;
-                display: inline-flex;
-                justify-content: end;
-            } */
         }
     }
 

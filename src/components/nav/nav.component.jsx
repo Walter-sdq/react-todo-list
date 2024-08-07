@@ -35,13 +35,13 @@ const Nav = () => {
                                 <span>
                                     <i className="fas fa-clock"></i>
                                 </span>
-                                <Link to={pending}>{`${pending} tasks`}</Link>
+                                <Link to={`/${pending}`}>{`${pending} tasks`}</Link>
                             </li>
                             <li>
                                 <span>
                                     <i className="fas fa-trash"></i>
                                 </span>
-                                <Link to={trash}>{`${trash} tasks`}</Link>
+                                <Link to={`/${trash}`}>{`${trash} tasks`}</Link>
                             </li>
                         </ul>
                     </div>
