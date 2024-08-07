@@ -92,7 +92,7 @@ const useFetch = (url) => {
 
                 })
 
-        }, 3000);
+        }, 1000);
         return () => {
             abort.abort()
         }

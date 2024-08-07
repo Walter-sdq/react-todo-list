@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './todo.css'
-const Todo = ({ lists, isNotNull, handleDelete, loading }) => {
+const Todo = ({ lists, isNotNull, handleDelete}) => {
     // function check() {
     //     if (lists.lenght < 1) {
     //         `you have ${lists.length} task(s) on the list`
@@ -22,12 +23,14 @@ const Todo = ({ lists, isNotNull, handleDelete, loading }) => {
 
                         <div className="list-prev" key={list.id}>
                             <div className="list-prev-inner">
-                                <h2 className="list-title">
-                                    {list.name}
-                                </h2>
-                                <p className="list-details">
-                                    {list.body}
-                                </p>
+                                <Link to={`/lists/${list.id}`}>
+                                    <h2 className="list-title">
+                                        {list.name}
+                                    </h2>
+                                    <p className="list-details">
+                                        {list.body}
+                                    </p>
+                                </Link>
                             </div>
                             <div className="chk-btn">
                                 <i className="fas fa-check done" title='Done'></i>

@@ -2,17 +2,17 @@
     "lists": [
         {
             "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
+            "body": "first thing this morning is to have a positive mindset",
             "id": 1
         },
         {
             "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
+            "body": "first thing this morning is to have a positive mindset with good plans for the day",
             "id": 2
         },
         {
             "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
+            "body": "first thing this morning is to have a positive mindset2",
             "id": 3
         },
         {
@@ -24,31 +24,6 @@
             "name": "reminder",
             "body": "first thing this morning is to have a positive mindset1",
             "id": 5
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
-            "id": 6
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
-            "id": 7
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
-            "id": 8
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
-            "id": 9
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
-            "id": 10
         }
     ],
     "completed": [
@@ -67,5 +42,7 @@
             "body": "first thing this morning is to have a positive mindset1",
             "id": 3
         }
-    ]
+    ],
+    "pending": [],
+    "trashed": []
 }

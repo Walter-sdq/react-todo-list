@@ -8,6 +8,7 @@ import Home from "../pages/home.component";
 import Completed from "../pages/completed.component";
 import Pending from     "../pages/pending.component";
 import Trashed from "../pages/trashed.component";
+import Details from "../pages/todoDetails.component";
 const Container = () => {
 
     // const itemsCheck =  function() {
@@ -38,6 +39,22 @@ const Container = () => {
                     <Route path='trashed'>
                         <Trashed />
                     </Route>
+
+                    <Route path='/lists/:id'>
+                        <Details/>
+                    </Route>
+
+                    {/* <Route path='/completed/:id'>
+                        <Details/>
+                    </Route> */}
+
+                    {/* <Route path='/pending/:id'>
+                        <Details/>
+                    </Route>
+
+                    <Route path='/trash/:id'>
+                        <Details/>
+                    </Route> */}
 
                 </Switch>
             </div>

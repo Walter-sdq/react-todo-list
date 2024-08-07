@@ -30,7 +30,7 @@ const Nav = () => {
                                 <span>
                                     <i className="fas fa-circle-check"></i>
                                 </span>
-                                <Link to={completed}>{`${completed} tasks`}</Link></li>
+                                <Link to={`/${completed}`}>{`${completed} tasks`}</Link></li>
                             <li>
                                 <span>
                                     <i className="fas fa-clock"></i>

@@ -1,5 +1,30 @@
 .showLists,
 .completed,
-.pending {
+.pending,
+.todoDetail {
     width: -moz-available;
+}
+
+.todoDetail {
+    width: -moz-available;
+
+    .details {
+        padding: 2rem 2rem;
+        box-sizing: border-box;
+        height: 100%;
+
+        .detail-head {
+            color: var(--bs-lblue);
+            text-transform: capitalize;
+            margin-bottom: 2rem;
+            font-size: 50px;
+
+        }
+
+        .detail-body {
+            font-size: 20px;
+            text-align: justify;
+            line-height: 2rem;
+        }
+    }
 }
