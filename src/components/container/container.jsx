@@ -6,7 +6,7 @@ import './container.css'
 import '../pages/pages.css'
 import Home from "../pages/home.component";
 import Completed from "../pages/completed.component";
-import Pending from     "../pages/pending.component";
+import Pending from "../pages/pending.component";
 import Trashed from "../pages/trashed.component";
 import Details from "../pages/todoDetails.component";
 const Container = () => {
@@ -18,10 +18,17 @@ const Container = () => {
     //         `you are all cought up :)`
     //     }
     // }
+
+    const logo = 'do.'
+    const home = '/'
+    const completed = '/completed'
+    const pending = '/pending'
+    const trash = '/trashed'
+
     return (
         <Router>
             <div className="wrapper">
-                <Nav />
+                <Nav logo={logo} home={home} completed={completed} pending={pending} trash={trash} />
                 <Switch >
 
                     <Route exact path="/">
@@ -41,7 +48,7 @@ const Container = () => {
                     </Route>
 
                     <Route path='/lists/:id'>
-                        <Details/>
+                        <Details />
                     </Route>
 
                     {/* <Route path='/completed/:id'>

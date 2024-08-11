@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import './nav.css'
-const Nav = () => {
+const Nav = ({ logo, home, completed, pending, trash }) => {
 
-    const logo = 'do.'
-    const home = 'home'
-    const completed = 'completed'
-    const pending = 'pending'
-    const trash = 'trashed'
+    // const logo = 'do.'
+    // const home = '/'
+    // const completed = '/completed'
+    // const pending = '/pending'
+    // const trash = '/trashed'
 
     return (
 
@@ -14,7 +14,7 @@ const Nav = () => {
             <div className="navPadding">
                 <div className="navContainer">
                     <div className="logo">
-                        <Link to="#">
+                        <Link to={home}>
                             {logo}
                         </Link>
                     </div>
@@ -24,24 +24,24 @@ const Nav = () => {
                                 <span>
                                     <i className="fas fa-home"></i>
                                 </span>
-                                <Link to='/'>{home}</Link>
+                                <Link to={home}>home</Link>
                             </li>
                             <li>
                                 <span>
                                     <i className="fas fa-circle-check"></i>
                                 </span>
-                                <Link to={`/${completed}`}>{`${completed} tasks`}</Link></li>
+                                <Link to={completed}> completed tasks</Link></li>
                             <li>
                                 <span>
                                     <i className="fas fa-clock"></i>
                                 </span>
-                                <Link to={`/${pending}`}>{`${pending} tasks`}</Link>
+                                <Link to={pending}> ending tasks </Link>
                             </li>
                             <li>
                                 <span>
                                     <i className="fas fa-trash"></i>
                                 </span>
-                                <Link to={`/${trash}`}>{`${trash} tasks`}</Link>
+                                <Link to={trash}>trashed tasks</Link>
                             </li>
                         </ul>
                     </div>

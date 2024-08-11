@@ -43,7 +43,9 @@
         justify-content: space-between;
         padding: 1rem 0 1rem 1rem;
         box-sizing: border-box;
-
+a{
+    width: 100%;
+}
         .list-title {
             color: var(--bs-lblue);
             text-transform: capitalize;

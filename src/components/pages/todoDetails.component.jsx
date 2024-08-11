@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import useFetch from "../hooks/fetchListsData.component";
+
 const Details = () => {
     const { id } = useParams()
     const { data: list, err, loading } = useFetch(`http://localhost:8000/lists/${id}`)
