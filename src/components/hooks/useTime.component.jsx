@@ -1,10 +1,22 @@
-const Time = (props) => {
-    const currentTime = new Date(),
-        hours = currentTime.getHours(),
-        minutes = currentTime.getMinutes(),
-        seconds = currentTime.getSeconds(),
-        ampm = hours >= 12 ? 'pm' : 'am';
-        
+import React, { useState, useEffect } from 'react';
+
+const Time = () => {
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 1000);
+
+       
+        return () => clearInterval(timer);
+    }, []);
+
+    const hours = currentTime.getHours();
+    const minutes = currentTime.getMinutes();
+    const seconds = currentTime.getSeconds();
+    const ampm = hours >= 12 ? 'pm' : 'am';
+
     return (
         <div className="clock">
             {
@@ -16,10 +28,8 @@ const Time = (props) => {
             }:{
                 seconds > 9 ? seconds : `0${seconds}`
             } {ampm}
-
-            {console.log(currentTime)}
         </div>
-    )
+    );
 }
 
 export default Time;
