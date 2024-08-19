@@ -1,11 +1,11 @@
-import useFetch from "../hooks/fetchListsData.component";
-import Time from "../hooks/useTime.component";
+import useFetch from "../ext-hooks/fetchListsData.component";
+import Time from "../ext-hooks/useTime.component";
 import Todo from "../todo/todo.component";
 // import 
 const Home = (props) => {
 
     const {
-        data:lists,
+        data: lists,
         loading,
         err,
         handleDelete
@@ -15,7 +15,7 @@ const Home = (props) => {
         <div className="showLists">
             {err && <div>{err}</div>}
             {loading && <div className='inline'>Loading...</div>}
-            {<Time currentTime/> }
+            {<Time currentTime />}
             {lists && <Todo
                 lists={lists}
                 isNotNull={lists.length < 1 ? `You are all cought up :)` : `you have ${lists.length} task(s) on the list`}

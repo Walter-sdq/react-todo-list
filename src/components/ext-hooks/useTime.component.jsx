@@ -8,10 +8,9 @@ const Time = () => {
             setCurrentTime(new Date());
         }, 1000);
 
-       
+
         return () => clearInterval(timer);
     }, []);
-
     const hours = currentTime.getHours();
     const minutes = currentTime.getMinutes();
     const seconds = currentTime.getSeconds();
@@ -19,15 +18,24 @@ const Time = () => {
 
     return (
         <div className="clock">
-            {
+            <div className="day">todat is { }</div>
+            <div className="time"><span className="hr">{
                 hours === 0 ? 12 :
                     (hours > 12) ?
                         hours - 12 : hours
-            }:{
-                minutes > 9 ? minutes : `0${minutes}`
-            }:{
-                seconds > 9 ? seconds : `0${seconds}`
-            } {ampm}
+            }</span>
+                :<span className="min">
+                    {
+                        minutes > 9 ? minutes : `0${minutes}`
+                    }
+                </span>
+                :<span className="sec">
+                    {
+                        seconds > 9 ? seconds : `0${seconds}`
+                    }
+                </span> <span className="ampm">{ampm}</span>
+            </div>
+
         </div>
     );
 }

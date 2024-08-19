@@ -19,7 +19,7 @@ const Container = () => {
     //     }
     // }
 
-    const logo = 'do.'
+    const logo = 'Todo.'
     const home = '/'
     const completed = '/completed'
     const pending = '/pending'
@@ -39,29 +39,29 @@ const Container = () => {
                         <Completed />
                     </Route>
 
-                    <Route path='pending'>
+                    <Route path='/pending'>
                         <Pending />
                     </Route>
 
-                    <Route path='trashed'>
+                    <Route path='/trashed'>
                         <Trashed />
                     </Route>
 
                     <Route path='/lists/:id'>
-                        <Details />
+                        <Details type='lists' />
                     </Route>
 
-                    {/* <Route path='/completed/:id'>
-                        <Details/>
-                    </Route> */}
+                    <Route path='/completed/:id'>
+                        <Details type='completed' />
+                    </Route>
 
-                    {/* <Route path='/pending/:id'>
-                        <Details/>
+                    <Route path='/pending/:id'>
+                        <Details type='pending' />
                     </Route>
 
                     <Route path='/trash/:id'>
-                        <Details/>
-                    </Route> */}
+                        <Details type='trash' />
+                    </Route>
 
                 </Switch>
             </div>

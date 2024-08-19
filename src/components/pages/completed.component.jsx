@@ -1,4 +1,4 @@
-import useFetch from "../hooks/fetchListsData.component";
+import useFetch from "../ext-hooks/fetchListsData.component";
 import Todo from "../todo/todo.component";
 
 
