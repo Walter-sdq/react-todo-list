@@ -18,7 +18,7 @@ const Time = () => {
 
     return (
         <div className="clock">
-            <div className="day">todat is { }</div>
+            <div className="day">todat is {`${ currentTime.getDate()} ${ currentTime.getMonth()}` }</div>
             <div className="time"><span className="hr">{
                 hours === 0 ? 12 :
                     (hours > 12) ?

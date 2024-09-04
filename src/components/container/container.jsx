@@ -9,16 +9,8 @@ import Completed from "../pages/completed.component";
 import Pending from "../pages/pending.component";
 import Trashed from "../pages/trashed.component";
 import Details from "../pages/todoDetails.component";
+
 const Container = () => {
-
-    // const itemsCheck =  function() {
-    //     if (lists.length < 1) {
-    //         `you have ${lists.length} task(s) on the list`
-    //     } else {
-    //         `you are all cought up :)`
-    //     }
-    // }
-
     const logo = 'Todo.'
     const home = '/'
     const completed = '/completed'
@@ -28,22 +20,24 @@ const Container = () => {
     return (
         <Router>
             <div className="wrapper">
+
                 <Nav logo={logo} home={home} completed={completed} pending={pending} trash={trash} />
+                
                 <Switch >
 
-                    <Route exact path="/">
+                    <Route  exact path="/">
                         <Home />
                     </Route>
 
-                    <Route path='/completed'>
+                    <Route  exact path='/completed'>
                         <Completed />
                     </Route>
 
-                    <Route path='/pending'>
+                    <Route  exact path='/pending'>
                         <Pending />
                     </Route>
 
-                    <Route path='/trashed'>
+                    <Route  exact path='/trashed'>
                         <Trashed />
                     </Route>
 
@@ -59,8 +53,8 @@ const Container = () => {
                         <Details type='pending' />
                     </Route>
 
-                    <Route path='/trash/:id'>
-                        <Details type='trash' />
+                    <Route path='/trashed/:id'>
+                        <Details type='trashed' />
                     </Route>
 
                 </Switch>

@@ -1,48 +1,17 @@
 {
-    "lists": [
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset",
-            "id": 1
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset with good plans for the day",
-            "id": 2
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset2",
-            "id": 3
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
-            "id": 4
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
-            "id": 5
-        }
-    ],
-    "completed": [
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
-            "id": 1
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
-            "id": 2
-        },
-        {
-            "name": "reminder",
-            "body": "first thing this morning is to have a positive mindset1",
-            "id": 3
-        }
-    ],
-    "pending": [],
-    "trashed": []
+  "lists": [
+    {
+      "id": "c7d1",
+      "title": "Finish my react todo list",
+      "body": "get things done on the react todo list so i can get to other things"
+    },
+    {
+      "id": "ff25",
+      "title": "congratulate myself",
+      "body": "i just have to congratulate myself for successfully creating a react todo list with REST funcionallity"
+    }
+  ],
+  "completed": [],
+  "pending": [],
+  "trashed": []
 }

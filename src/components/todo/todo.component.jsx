@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './todo.css'
-const Todo = ({ lists, isNotNull, handleDelete }) => {
+const Todo = ({ lists, isNotNull, handleDelete,listType }) => {
    
     return (
 
@@ -13,10 +13,11 @@ const Todo = ({ lists, isNotNull, handleDelete }) => {
 
                     {lists.map((list) => (
                         
-                            <div className="list-prev" key={list.id}><Link to={`/lists/${list.id}`}>
+                        <div className="list-prev" key={list.id}>
+                            <Link to={`/${listType}/${list.id}`}>
                                 <div className="list-prev-inner">
                                     <h2 className="list-title">
-                                        {list.name}
+                                        {list.title}
                                     </h2>
                                     <p className="list-details">
                                         {list.body}

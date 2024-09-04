@@ -1,5 +1,7 @@
 .input-con{
-    margin: 0 auto;
-    width: 100%;
-    grid-column: 4/end;
+text-align: center;
+}
+label{
+    display: block;
+    text-align: left;
 }

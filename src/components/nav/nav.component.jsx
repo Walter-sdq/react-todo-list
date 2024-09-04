@@ -35,7 +35,7 @@ const Nav = ({ logo, home, completed, pending, trash }) => {
                                 <span>
                                     <i className="fas fa-clock"></i>
                                 </span>
-                                <Link to={pending}> ending tasks </Link>
+                                <Link to={pending}> pending tasks </Link>
                             </li>
                             <li>
                                 <span>

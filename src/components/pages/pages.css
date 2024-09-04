@@ -1,10 +1,17 @@
 .showLists,
 .completed,
 .pending,
+.trashed,
 .todoDetail {
     width: -moz-available;
 }
-
+.completed,
+.pending,
+.trashed{
+    i.done{
+        display:none
+    }
+}
 .todoDetail {
     width: -moz-available;
 

@@ -1,4 +1,4 @@
-import useFetch from "../ext-hooks/fetchListsData.component";
+import useFetch from "../ext-hooks/useFetch.component";
 import Todo from "../todo/todo.component";
 
 
@@ -20,6 +20,7 @@ const Completed = () => {
                 lists={lists}
                 isNotNull={lists.length < 1 ? `You are all cought up :)` : `you have ${lists.length} completed task(s) GOOD JOB!`}
                 handleDelete={handleDelete}
+                listType="completed"
             />}
         </div>
     );
