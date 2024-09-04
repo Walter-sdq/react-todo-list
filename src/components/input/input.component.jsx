@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState} from 'react'
 import './input.css'
 
 const Input = () => {
@@ -6,6 +6,7 @@ const Input = () => {
     const bodyP = "Give more details"
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
+    
     const submitFunc = (e) => {
         e.preventDefault()
         const list = {
@@ -21,7 +22,7 @@ const Input = () => {
             console.log('List added')
         })
     }
-
+    
     return (
         <div className="input-cont">
             <div className="formArea">
@@ -47,7 +48,6 @@ const Input = () => {
                             className="details"
                             id="details"
                             placeholder={bodyP}
-                            required
                             onChange={(e) => setBody(e.target.value)}></textarea>
                     </div>
                     <button type='submit'>Add to list</button>

@@ -9,31 +9,18 @@ const useFetch = (url) => {
 
     const handleDelete = (id) => {
         // const newData = data.filter(list => list.id !== id)
-        console.log(url.id);
-        if (url === `localhost:8000/trashed`) {
-            fetch('http://localhost:8000/pending', {
-            method: "POST",
-            // headers: { "Content-Type": "application/json" },
-            // body: JSON.stringify(list)
-        }).then(() => {
-            console.log('List added to pending')
-        })
-        } else {
+        // setData(newData)
+        // console.log(url+id);
             fetch(`${url}/${id}`, {
                 method: "DELETE"
             })
-        }
-
-
-        // setData(newData)
-
-        // fetch(`${url}/${type}/${id}`)
-
+    }
+    const completed = (id) => {
+        
     }
 
     useEffect(() => {
         const abort = new AbortController()
-        setTimeout(() => {
             fetch(url, { signal: abort.signal })
                 .then(res => {
                     if (!res.ok) {
@@ -56,14 +43,12 @@ const useFetch = (url) => {
                     }
 
                 })
-
-        }, 1000);
         return () => {
             abort.abort()
         }
     }, [url])
     return {
-        data, loading, err, handleDelete
+        data, loading, err, handleDelete,completed
     }
 
 }

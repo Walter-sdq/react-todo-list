@@ -9,6 +9,7 @@ import Completed from "../pages/completed.component";
 import Pending from "../pages/pending.component";
 import Trashed from "../pages/trashed.component";
 import Details from "../pages/todoDetails.component";
+import NotFound from "../pages/404.component";
 
 const Container = () => {
     const logo = 'Todo.'
@@ -55,6 +56,9 @@ const Container = () => {
 
                     <Route path='/trashed/:id'>
                         <Details type='trashed' />
+                    </Route>
+                    <Route path='*'>
+                       <NotFound/>
                     </Route>
 
                 </Switch>

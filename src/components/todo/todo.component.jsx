@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import './todo.css'
-const Todo = ({ lists, isNotNull, handleDelete,listType }) => {
+const Todo = ({ lists, isNotNull, handleDelete,listType ,completed}) => {
    
     return (
 
@@ -24,7 +24,7 @@ const Todo = ({ lists, isNotNull, handleDelete,listType }) => {
                                     </p>
                                 </div>  </Link>
                                 <div className="chk-btn">
-                                    <i className="fas fa-check done" title='Done'></i>
+                                    <i className="fas fa-check done" title='Done'onClick={completed}></i>
                                     <i className="fas fa-delete-left delete" title='Delete' onClick={() => handleDelete(list.id)} ></i>
                                 </div>
                             </div>

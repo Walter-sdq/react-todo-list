@@ -9,6 +9,7 @@ const Home = (props) => {
         data: lists,
         loading,
         err,
+        completed,
         handleDelete
     } = useFetch('http://localhost:8000/lists')
 
@@ -17,13 +18,20 @@ const Home = (props) => {
             {err && <div>{err}</div>}
             {loading && <div className='inline'>Loading...</div>}
             {<Time currentTime />}
-            {<Input/>}
+            {<Input />}
             {lists && (
                 <Todo
                     lists={lists}
-                    isNotNull={lists.length < 1 ? `You are all cought up :)` : `you have ${lists.length} task(s) on the list`}
+                    isNotNull={
+                        lists.length < 1
+                        ?
+                        `You are all cought up :)`
+                        :
+                        `you have ${lists.length} task(s) on the list`
+                    }
                     handleDelete={handleDelete}
                     listType="lists"
+                    completed={completed}
                 />
             )}
         </div>
