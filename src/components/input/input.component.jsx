@@ -21,8 +21,11 @@ const Input = () => {
         }).then(() => {
             console.log('List added')
         })
+        
     }
     
+
+
     return (
         <div className="input-cont">
             <div className="formArea">
@@ -52,9 +55,6 @@ const Input = () => {
                     </div>
                     <button type='submit'>Add to list</button>
                 </form>
-
-                <h3>{title}</h3>
-                <p> {body} </p>
             </div>
         </div>
     );
